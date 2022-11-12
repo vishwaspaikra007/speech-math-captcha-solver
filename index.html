@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Captcha solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+
+    <h1>IITG Login Page</h1>
+    <div>
+      <div id="captchaBox">
+        <form onsubmit="signin(event)">
+          <div id="form">
+            <img src="iitglogo.png" alt="iit logo"/>
+            <h2>IIT Guwahati</h2>
+            <input type="text" name="name" placeholder="username" required>
+            <input type="password" name="pwd" placeholder="password" required>
+            <!-- <button >Sign in</button> -->
+            <span></span>
+            <div id="controls">
+              <button id="recordButton">Speak now</button>
+            </div>
+            <div id="formats">Format: start recording to see sample rate</div>
+            <div id="audio">
+              <p><strong>Recordings:</strong></p>
+              <ol id="recordingsList"></ol>
+            </div>
+            <div id="recognizedDigit">
+              <span>
+              </span>
+            </div>
+          </div>
+          <div id="captcha">
+            <!-- <span></span>
+            <div id="controls">
+              <button id="recordButton">Speak now</button>
+            </div>
+            <div id="formats">Format: start recording to see sample rate</div>
+            <div id="audio">
+              <p><strong>Recordings:</strong></p>
+              <ol id="recordingsList"></ol>
+            </div>
+            <div id="recognizedDigit">
+              <span>
+              </span>
+            </div> -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="content">
+      <h1>Welcome</h1>
+      <span>
+        <textarea onkeyup="update(event)" id="text"></textarea>
+      </span>
+    </div>
+    <pre id="list"></pre>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<script src="js/codebookModel.js"></script>
+  	<script src="js/data.js"></script>
+  	<script src="js/captchaLogic.js"></script>
+  	<script src="js/recognize.js"></script>
+  	<script src="js/recorder.js"></script>
+  	<script src="js/app.js"></script>
+  </body>
+</html>

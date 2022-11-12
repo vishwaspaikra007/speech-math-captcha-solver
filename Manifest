@@ -1,0 +1,16 @@
+{
+    "background_color": "#fff",
+    "theme_color": "#005A9C",
+    "display": "standalone",
+    "description": "Speech Math Captcha Solver.",
+    "icons": [
+    {
+        "src": "favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }
+    ],
+    "name": "Speech Math Captcha solver",
+    "short_name": "IITG",
+    "start_url": "/speech-math-captcha-solver/index.html"
+}
