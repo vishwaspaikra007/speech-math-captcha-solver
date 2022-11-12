@@ -230,7 +230,9 @@ function fileReading(blob) {
 		if(ans == recognizedDigit) {
 			
 			let text = document.querySelector("#text")
-			if(userbase[user+pwd].text == undefined)
+			if(userbase[user+pwd] == undefined)
+				userbase[user+pwd] = {text: ""}
+			else if(userbase[user+pwd].text == undefined)
 				userbase[user+pwd].text = ""
 			else
 				text.value = userbase[user+pwd].text
