@@ -93,8 +93,8 @@ function dump_observation() {
 			index = j;
 		}
 	}
-	console.log(`${index + 1}`);
-	observation_seq[observation_seq_size++] = index + 1;
+	console.log(`${index}`);
+	observation_seq[observation_seq_size++] = index ;
 }
 
 // *******************************************************************************************************************
@@ -309,7 +309,7 @@ function calculate_observation_seq(sample_size, sample) {
 // find probability
 function initialize_aplha1() {
 	for(let i = 0; i < N; ++i) {
-		alpha[0][i] = parseFloat(_pi[i] * b[curr_digit][i][observation_seq[0]-1]);
+		alpha[0][i] = parseFloat(_pi[i] * b[curr_digit][i][observation_seq[0]]);
         //console.log(alpha[0][i])
 	}
 }
@@ -322,7 +322,7 @@ function induce_alpha() {
 				sum += parseFloat(alpha[t-1][i] * a[curr_digit][i][j]);
 			}
 
-			alpha[t][j] = parseFloat(sum * b[curr_digit][j][observation_seq[t]-1]);
+			alpha[t][j] = parseFloat(sum * b[curr_digit][j][observation_seq[t]]);
 		}
 	}
 }
