@@ -94,7 +94,7 @@ function startRecording() {
 
 		setTimeout(() => {
 			stopRecording();
-		}, 2000, stopRecording);
+		}, 3000, stopRecording);
 
 	}).catch(function(err) {
 	  	//enable the record button if getUserMedia() fails
