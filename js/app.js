@@ -305,7 +305,7 @@ function showContent() {
 	content.style.opacity = "1"
 
 	let contentH1 = document.querySelector("#content h1")
-	contentH1.innerHTML = `Welcoome ${user}`
+	contentH1.innerHTML = `Welcome ${user}`
 	
 }
 
