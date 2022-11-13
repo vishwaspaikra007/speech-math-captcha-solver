@@ -37,8 +37,22 @@ function generateCaptcha() {
             maxi = mini * ans;
     }   
 
-    let captchaBox = document.querySelector("#form > span")
+    let captchaBox = document.querySelector("#form > div > span")
     captchaBox.innerHTML = `${maxi} ${operand} ${mini}`
+
+    let captchaRefresh = document.querySelector("#form #refresh")
+    captchaRefresh.style.transition = "ease 1s"
+    captchaRefresh.style.transform = "rotate(360deg)"
+
+    setTimeout(() => {
+        captchaRefresh.style.transition = "0s"
+        captchaRefresh.style.transform = "rotate(0deg)"
+    }, 1000, captchaRefresh);
+    
+    // let img = document.createElement('div');
+    // img.setAttribute("onclick", "generateCaptcha()")
+    // img.setAttribute("alt", "iit logo")
+    // captchaBox.appendChild(img)
 
 
     // captchaBox.innerHTML = arr[arr_i]

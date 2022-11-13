@@ -25,9 +25,12 @@
             <input type="text" name="name" placeholder="username" autocomplete="off" required>
             <input type="password" name="pwd" placeholder="password" autocomplete="off" required>
             <!-- <button >Sign in</button> -->
-            <span></span>
-            <div id="controls">
-              <button id="recordButton">Speak now</button>
+            <div style="position: relative">
+              <span></span>
+              <div id="refresh" onclick="generateCaptcha()" src="favicon.ico" alt="iit logo"></div>
+              <div id="controls">
+                <button id="recordButton">Speak now</button>
+              </div>
             </div>
             <div id="formats">Format: start recording to see sample rate</div>
             <div id="audio">
@@ -65,8 +68,8 @@
     </div>
     <pre id="list"></pre>
     <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
-  	<script src="js/activateSW.js"></script>
   	<script src="sw.js"></script>
+  	<script src="activateSW.js"></script>
   	<script src="js/codebookModel.js"></script>
   	<script src="js/data.js"></script>
   	<script src="js/captchaLogic.js"></script>
