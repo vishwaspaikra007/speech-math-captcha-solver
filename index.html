@@ -27,7 +27,7 @@
             <!-- <button >Sign in</button> -->
             <div style="position: relative">
               <span></span>
-              <div id="refresh" onclick="generateCaptcha()" src="favicon.ico" alt="iit logo"></div>
+              <div id="refresh" onclick="generateCaptcha()"></div>
               <div id="controls">
                 <button id="recordButton">Speak now</button>
               </div>
@@ -68,6 +68,26 @@
     </div>
     <pre id="list"></pre>
     <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCmii1-wmb6kIz2MfPmaMbRIVSzRIF1K_8",
+        authDomain: "speech-math-captcha-solver.firebaseapp.com",
+        projectId: "speech-math-captcha-solver",
+        storageBucket: "speech-math-captcha-solver.appspot.com",
+        messagingSenderId: "446822410270",
+        appId: "1:446822410270:web:494ea15d6f03fe1aff660f"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  	<!-- <script src="firebase.js"></script> -->
   	<script src="js/serviceWorkerSCS.js"></script>
   	<script src="js/activateSW.js"></script>
   	<script src="js/codebookModel.js"></script>
