@@ -94,7 +94,7 @@ function dump_observation() {
 		}
 	}
 	console.log(`${index}`);
-	observation_seq[observation_seq_size++] = index ;
+	observation_seq[observation_seq_size++] = index;
 }
 
 // *******************************************************************************************************************
@@ -171,7 +171,7 @@ function extract_voiced_frames_from_normalised_sample(sample_size, sample) {
     if(end==-1) end=frame_size;
 	diff=23-(end-start+1);
 	start=parseInt(Math.max(0, start-(diff/2)));
-	end=parseInt(Math.min(frame_size, end+(diff/2)));
+	end=parseInt(Math.min(energy_size, end+(diff/2)));
 	// if(end - start > 40) {
 	// 	start = Math.max(start, maxEnergy.idx - 20)
 	// 	end = Math.min(end, maxEnergy.idx + 20)
@@ -183,7 +183,7 @@ function extract_voiced_frames_from_normalised_sample(sample_size, sample) {
         
 	// }
 
-
+	
     const same = [];
     const dame = []
     for(let i = 0; i < sample_size; ++i)
