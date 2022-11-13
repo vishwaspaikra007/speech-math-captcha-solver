@@ -5,12 +5,12 @@
     "description": "Speech Math Captcha Solver.",
     "icons": [
     {
-        "src": "favicon.png",
+        "src": "iitglogo.png",
         "sizes": "192x192",
         "type": "image/png"
     },
     {
-        "src": "favicon.png",
+        "src": "iitglogo.png",
         "sizes": "5132x512",
         "type": "image/png"
     }
