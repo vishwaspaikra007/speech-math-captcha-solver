@@ -1,7 +1,7 @@
 const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register("./serviceWorkerSCS.js", {
+        const registration = await navigator.serviceWorker.register("./js/serviceWorkerSCS.js", {
           scope: "/speech-math-captcha-solver",
         });
         if (registration.installing) {
