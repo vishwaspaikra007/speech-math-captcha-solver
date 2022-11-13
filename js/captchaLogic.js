@@ -31,10 +31,12 @@ function generateCaptcha() {
             ans = parseInt(maxi / mini);
             maxi = ans;
             ans = maxi * mini;
+            break;
         case 2:
             operand = "÷"
             ans = parseInt(maxi / mini);
             maxi = mini * ans;
+            break;
     }   
 
     let captchaBox = document.querySelector("#form > div > span")
