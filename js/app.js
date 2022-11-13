@@ -229,6 +229,13 @@ function fileReading(blob) {
 		console.log("ans recognized digit", ans, recognizedDigit)
 		if(ans == recognizedDigit) {
 			
+			if(localStorage.getItem("userbase") == null) {
+				localStorage.setItem("userbase", JSON.stringify(defaultUserbase))
+			} else {
+				console.log(localStorage.getItem("userbase"))
+				userbase = {...JSON.parse((localStorage.getItem("userbase")))}
+			}
+
 			let text = document.querySelector("#text")
 			if(userbase[user+pwd] == undefined)
 				userbase[user+pwd] = {text: ""}
@@ -286,25 +293,6 @@ function showContent() {
 	content.style.top = "0"
 	content.style.opacity = "1"
 	
-}
-
-let defaultUserbase = {
-	"vishwasvishwas" : {
-		text: "vishwas studies in IITG"
-	},
-	"kushalkushal" : {
-		text: "kushal studies in IITG"
-	},
-	"hrimanhriman" : {
-		text: "hriman studies in IITG"
-	}
-}
-var userbase = {}
-if(localStorage.getItem("userbase") == null) {
-	localStorage.setItem("userbase", JSON.stringify(defaultUserbase))
-} else {
-	console.log(localStorage.getItem("userbase"))
-	userbase = {...JSON.parse((localStorage.getItem("userbase")))}
 }
 
 console.log(userbase)
