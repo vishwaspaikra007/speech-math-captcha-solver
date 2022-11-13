@@ -6,12 +6,7 @@
     "icons": [
     {
         "src": "iitglogo.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    },
-    {
-        "src": "iitglogo.png",
-        "sizes": "512x512",
+        "sizes": "400x403",
         "type": "image/png"
     }
     ],
