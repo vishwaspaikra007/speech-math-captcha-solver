@@ -1,0 +1,178 @@
+[debug] [2022-11-13T11:26:25.554Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:26:25.556Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:26:25.556Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:26:25.556Z] Platform:      linux
+[debug] [2022-11-13T11:26:25.556Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:26:25.556Z] Time:          Sun Nov 13 2022 16:56:25 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:26:25.557Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:26:25.629Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:26:25.629Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:26:25.630Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:26:25.631Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:26:25.631Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:26:25.631Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:26:27.431Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions 200
+[debug] [2022-11-13T11:26:27.431Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:26:27.432Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:26:57.451Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:26:57.822Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:238:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project speech-math-captcha-solver. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-11-13T11:27:30.838Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:27:30.841Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:27:30.841Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:27:30.841Z] Platform:      linux
+[debug] [2022-11-13T11:27:30.842Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:27:30.842Z] Time:          Sun Nov 13 2022 16:57:30 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:27:30.842Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:27:30.908Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:27:30.908Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:27:30.909Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:27:30.910Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:27:30.911Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:27:30.911Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:27:32.622Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions 200
+[debug] [2022-11-13T11:27:32.622Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:27:32.623Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:28:02.638Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:28:07.650Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-11-13T11:28:30.675Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:28:30.677Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:28:30.677Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:28:30.677Z] Platform:      linux
+[debug] [2022-11-13T11:28:30.677Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:28:30.677Z] Time:          Sun Nov 13 2022 16:58:30 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:28:30.678Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:28:30.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:28:30.741Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:28:30.741Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:28:30.743Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:28:30.743Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:28:30.743Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:28:32.373Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions 200
+[debug] [2022-11-13T11:28:32.373Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:28:32.374Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:28:33.027Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver 200
+[debug] [2022-11-13T11:28:33.027Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver {"projectId":"speech-math-captcha-solver","projectNumber":"446822410270","displayName":"speech math captcha solver","name":"projects/speech-math-captcha-solver","resources":{"hostingSite":"speech-math-captcha-solver"},"state":"ACTIVE","etag":"1_f04ac12f-8bfd-4b5e-bdaa-e5878689a539"}
+[info] 
+[info] === Deploying to 'speech-math-captcha-solver'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-13T11:28:33.032Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/speech-math-captcha-solver/versions [none]
+[debug] [2022-11-13T11:28:33.033Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/speech-math-captcha-solver/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-13T11:30:49.166Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-11-13T11:31:49.241Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:31:49.244Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:31:49.244Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:31:49.244Z] Platform:      linux
+[debug] [2022-11-13T11:31:49.245Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:31:49.245Z] Time:          Sun Nov 13 2022 17:01:49 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:31:49.245Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:31:49.316Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:31:49.316Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:31:49.316Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:31:49.318Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:31:49.318Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:31:49.318Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:31:51.086Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions 200
+[debug] [2022-11-13T11:31:51.086Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:31:51.087Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:31:51.715Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver 200
+[debug] [2022-11-13T11:31:51.715Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver {"projectId":"speech-math-captcha-solver","projectNumber":"446822410270","displayName":"speech math captcha solver","name":"projects/speech-math-captcha-solver","resources":{"hostingSite":"speech-math-captcha-solver"},"state":"ACTIVE","etag":"1_f04ac12f-8bfd-4b5e-bdaa-e5878689a539"}
+[info] 
+[info] === Deploying to 'speech-math-captcha-solver'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-13T11:31:51.721Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/speech-math-captcha-solver/versions [none]
+[debug] [2022-11-13T11:31:51.721Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/speech-math-captcha-solver/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-13T11:34:08.842Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-11-13T11:36:21.070Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:36:21.079Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:36:21.079Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:36:21.079Z] Platform:      linux
+[debug] [2022-11-13T11:36:21.079Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:36:21.079Z] Time:          Sun Nov 13 2022 17:06:21 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:36:21.080Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:36:21.154Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:36:21.155Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:36:21.155Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:36:21.157Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:36:21.157Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:36:21.157Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:36:22.843Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions 200
+[debug] [2022-11-13T11:36:22.843Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:36:22.844Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:36:52.852Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:36:56.331Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:238:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project speech-math-captcha-solver. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-11-13T11:39:38.780Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:39:38.782Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:39:38.782Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:39:38.782Z] Platform:      linux
+[debug] [2022-11-13T11:39:38.782Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:39:38.782Z] Time:          Sun Nov 13 2022 17:09:38 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:39:38.782Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:39:38.848Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:39:38.848Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:39:38.848Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:39:38.850Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:39:38.850Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:39:38.850Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:39:48.894Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions
+[debug] [2022-11-13T11:39:48.897Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:39:58.918Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:40:03.932Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-11-13T11:40:24.233Z] ----------------------------------------------------------------------
+[debug] [2022-11-13T11:40:24.234Z] Command:       /home/vishwas/.nvm/versions/node/v19.0.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-11-13T11:40:24.235Z] CLI Version:   11.16.0
+[debug] [2022-11-13T11:40:24.235Z] Platform:      linux
+[debug] [2022-11-13T11:40:24.235Z] Node Version:  v19.0.1
+[debug] [2022-11-13T11:40:24.235Z] Time:          Sun Nov 13 2022 17:10:24 GMT+0530 (India Standard Time)
+[debug] [2022-11-13T11:40:24.235Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-13T11:40:24.291Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-13T11:40:24.291Z] > authorizing via signed-in user (vishwaspaikra007@gmail.com)
+[debug] [2022-11-13T11:40:24.291Z] [iam] checking project speech-math-captcha-solver for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-13T11:40:24.293Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions [none]
+[debug] [2022-11-13T11:40:24.293Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions x-goog-quota-user=projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:40:24.293Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-13T11:40:34.332Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/speech-math-captcha-solver:testIamPermissions
+[debug] [2022-11-13T11:40:34.333Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver [none]
+[debug] [2022-11-13T11:40:44.347Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/speech-math-captcha-solver
+[debug] [2022-11-13T11:40:49.358Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
