@@ -275,6 +275,17 @@ function signin(e) {
 	console.log(user, pwd)
 	//generateCaptcha()
 }
+
+function logout() {
+
+	let content = document.querySelector("#content")
+	// content.style.transition = "ease 1s	"
+	content.style.top = "500px"
+	content.style.opacity = "0"
+
+	generateCaptcha()
+}
+
 generateCaptcha()
 // console.log("sample 9")
 // recognize(sample9.length, sample9);  
@@ -292,6 +303,9 @@ function showContent() {
 	content.style.transition = "ease 1s	"
 	content.style.top = "0"
 	content.style.opacity = "1"
+
+	let contentH1 = document.querySelector("#content h1")
+	contentH1.innerHTML = `Welcoome ${user}`
 	
 }
 
