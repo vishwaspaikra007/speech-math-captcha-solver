@@ -5,8 +5,18 @@
     "description": "Speech Math Captcha Solver.",
     "icons": [
     {
-        "src": "iitglogo.png",
-        "sizes": "400x403",
+        "src": "icon1.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "icon2.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+    },
+    {
+        "src": "icon3.png",
+        "sizes": "512x512",
         "type": "image/png"
     }
     ],
