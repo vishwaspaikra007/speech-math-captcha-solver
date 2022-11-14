@@ -34,7 +34,7 @@ function generateCaptcha() {
             break;
         case 2:
             operand = "÷"
-            ans = parseInt(maxi / mini);
+            ans = maxi;
             maxi = mini * ans;
             break;
     }   
