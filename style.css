@@ -110,13 +110,13 @@ li {
 }
 
 #captchaBox span {
-  font-size: 34px;
+  font-size: 25px;
   padding: 9px;
   line-height: 40px;
   font-weight: bold;
   border: 3px solid;
   color: rebeccapurple;
-  width: 105px;
+  width: 125px;
   display: inline-block;
   text-align: center; 
 }
@@ -214,7 +214,7 @@ form #audio {
     border-radius: 50%;
     padding: 9px;
     box-sizing: border-box;
-    left: 122px;
+    left: 133px;
     background-image: url(./favicon.ico);
     background-position: center;
     background-size: 80%;

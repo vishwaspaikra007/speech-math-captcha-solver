@@ -41,7 +41,7 @@ function generateCaptcha() {
     }   
 
     let captchaBox = document.querySelector("#form > div > span")
-    captchaBox.innerHTML = `${maxi} ${operand} ${mini}`
+    captchaBox.innerHTML = `${maxi} ${operand} ${mini} = ?`
 
     let captchaRefresh = document.querySelector("#form #refresh")
     captchaRefresh.style.transition = "ease 1s"
