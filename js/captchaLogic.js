@@ -22,7 +22,8 @@ function generateCaptcha() {
             operand = "+"
             ans = maxi + mini
             if(ans > 9) {
-                ans = maxi - mini
+                ans = maxi
+                maxi = maxi + mini
                 operand = "-"
             }
             break;

@@ -1,10 +1,4 @@
-
-var sam;
-// **************************************************************************************************************
-// model_generation
-
-//FILE *observation_seq_file;
-// **************************************************************************************************************
+var sam; // temporary varaible
 
 var p = 12;
 let q = p;
@@ -18,19 +12,16 @@ let codebook_size = M;
 var T1 = 84; // max observation seq
 let T = T1;
 
+// initialization
 const alpha = [] //α
 for(let i = 0; i < T1; ++i) {
 	alpha.push(new Float64Array(p+1));
 	for(let j = 0; j < N; ++j) {
 		alpha[i][j] = parseFloat(0.0);
-		//console.log(i, " ", j , " ", alpha[i][j]);
 	}
 		
 } 
 var probability = 0.0;
-
-// static values of a, b, and codebook
-// let x = [1,2,3,4,5,6,]
 
 const _pi = [1.0, 0.0, 0.0, 0.0, 0.0];
 const observation_seq = new Int32Array(T1*2);
@@ -47,7 +38,7 @@ const DC_Shift_Si = new Float64Array(50000);
 const Ri = new Float64Array(p+1);
 const Ai = new Float64Array(p+1);
 const Ci = new Float64Array(p+1);
-const Ci_RSW = new Float64Array(p+1);
+const Ci_RSW = new Float64Array(p+1); // raised Sine Window
 const avg_Ci_RSW = new Float64Array(p+1);
 const weights_for_raised_sine_window = new Float64Array(p+1);
 
@@ -82,11 +73,11 @@ function initialize_temp_with_Ci_RSW() {
 	}
 }
 
-function dump_observation() {
+function dump_observation() { // store observation of a frame in an array observation_seq[]
 	let minDist = Number.MAX_SAFE_INTEGER;
 	let index = 0;
 	for(let j = 0; j < codebook_size; ++j) {
-		const distance = calculate_tokhuras_distance(codebook[j], temp);
+		const distance = calculate_tokhuras_distance(final_codebook[j], temp);
 		//console.log("distance ", distance);
 		if(minDist >= distance) {
 			minDist = distance;
@@ -121,6 +112,7 @@ function DC_Shift_normalize(sample_size, sample) {
 	}
 }
 
+// extract voiced part from sample using energy
 function extract_voiced_frames_from_normalised_sample(sample_size, sample) {
 
 	let sum = normalised_Si[0] * normalised_Si[0];
@@ -139,20 +131,16 @@ function extract_voiced_frames_from_normalised_sample(sample_size, sample) {
 			}
             sum = 0;
 		}
-		//sum += normalised_Si[i] * normalised_Si[i];
 		sum += normalised_Si[i] * normalised_Si[i];
 	}
 
-	// let noise_energy = 0; // avg energy
-	// for(let i = 0; i < 3; ++i) { // earlier it was 3
-	// 	noise_energy += energy[i];
-	// }
 	noise_energy /= energy_size;
 
 	let energy_threshold = noise_energy * 3; //thresh
     console.log("energy_threshold ", energy_threshold)
 	start = 0, end = energy_size;
 	console.log(`end - start ${end} - ${start} ${end - start}`);
+
 	for(let i = 0; i < energy_size - 5; ++i) {
 		if(energy[i+1] >= energy_threshold && energy[i+2] >= energy_threshold && energy[i+3] >= energy_threshold && energy[i+4] >= energy_threshold) {
 			start = i;
@@ -172,18 +160,8 @@ function extract_voiced_frames_from_normalised_sample(sample_size, sample) {
 	diff=23-(end-start+1);
 	start=parseInt(Math.max(0, start-(diff/2)));
 	end=parseInt(Math.min(energy_size, end+(diff/2)));
-	// if(end - start > 40) {
-	// 	start = Math.max(start, maxEnergy.idx - 20)
-	// 	end = Math.min(end, maxEnergy.idx + 20)
-		
 
-	// 	// const x = parseInt((end - start - 40) / 2);
-	// 	// start += x;
-	// 	// end -= x;
-        
-	// }
-
-	
+	// prints the extracted sample after removing silence
     const same = [];
     const dame = []
     for(let i = 0; i < sample_size; ++i)
@@ -208,7 +186,6 @@ function calculate_Ci_raised_sine_window() {
 	for(let i = 1; i <= q; ++i) {
 		weights_for_raised_sine_window[i] = 1 + (q/2.0)*Math.sin(pi*i/(1.0*q));
 		Ci_RSW[i] = Ci[i]*weights_for_raised_sine_window[i];
-		//console.log("CRSW",i, " ", Ai[i]);
 
 	}
 }
@@ -224,7 +201,6 @@ function calculate_Ci() {
             sum += j*Ai[i-j]*Ci[j]/(i*1.0);
         }
         Ci[i] = Ai[i] + sum; 
-		//console.log("C",i, " ", Ai[i]);
 
     }
 }
@@ -238,7 +214,6 @@ function calculate_Ai() {
 		alpha.push(new Float64Array(p+1));
 		for(let j = 0; j <= p; ++j) {
 			alpha[i][j] = parseFloat(0.0);
-			//console.log(i, " ", j , " ", alpha[i][j]);
 		}
 			
 	}
@@ -268,7 +243,6 @@ function calculate_Ai() {
 
     for(let i = 1; i <= p; ++i) {
         Ai[i] = alpha[p][i];
-		//console.log("A",i, " ", Ai[i]);
     }
 }
 
@@ -279,7 +253,6 @@ function calculate_Ri(sample) {
 		Ri[i] = parseFloat(0.0);
 		for(let j = sample_start; j < sample_end - i; ++j) {
 			Ri[i] += normalised_Si[j]*normalised_Si[j+i]; 
-			//Ri[i] += DC_Shift_Si[j]*DC_Shift_Si[j+i];
 		}
 		
 	}
@@ -309,7 +282,7 @@ function calculate_observation_seq(sample_size, sample) {
 // find probability
 function initialize_aplha1() {
 	for(let i = 0; i < N; ++i) {
-		alpha[0][i] = parseFloat(_pi[i] * b[curr_digit][i][observation_seq[0]]);
+		alpha[0][i] = parseFloat(_pi[i] * final_b[curr_digit][i][observation_seq[0]]);
         //console.log(alpha[0][i])
 	}
 }
@@ -319,10 +292,10 @@ function induce_alpha() {
 		for(let j = 0; j < N; ++j) {
 			let sum = 0;
 			for(let i = 0; i < N; ++i) {
-				sum += parseFloat(alpha[t-1][i] * a[curr_digit][i][j]);
+				sum += parseFloat(alpha[t-1][i] * final_a[curr_digit][i][j]);
 			}
 
-			alpha[t][j] = parseFloat(sum * b[curr_digit][j][observation_seq[t]]);
+			alpha[t][j] = parseFloat(sum * final_b[curr_digit][j][observation_seq[t]]);
 		}
 	}
 }
@@ -356,7 +329,7 @@ function find_match() {
 // *******************************************************************************************************************
 
 // *******************************************************************************************************
-// this will be called by JS
+// this will be called after recording voce from app.js to recognize the digit
 function recognize(sample_size, sample) {
     
 	//set_defaults(); // si, ri, ai, ci to default

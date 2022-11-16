@@ -64,3 +64,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+js/HMM.js
+js/LBG.js
+js/universe_generation.js
+js/model_generation.js
+js/codebookModel2.js
